@@ -28,7 +28,7 @@ Vagrant.configure('2') do |config|
       end
     end
 
-    conf.hostmanager.enabled = true
-    conf.hostmanager.manage_guest = true
+    config.hostmanager.enabled = true
+    config.hostmanager.manage_guest = true
   end
 end
