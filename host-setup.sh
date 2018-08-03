@@ -10,7 +10,7 @@
 set -o errexit # make script exits when a command fails
 set -o pipefail # make script exits when the rightmost command of a pipeline exits with non-zero status
 set -o nounset # make script exits when it tries to use undeclared variables
-set -o xtrace # trace what gets executed for debugging purpose
+#set -o xtrace # trace what gets executed for debugging purpose
 
 # ensure running as root
 if [ "$(id -u)" != "0" ]; then
@@ -24,10 +24,10 @@ sed -i "/mesg n/d" /root/.profile
 ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # setup language
-echo "export LANG=en_US.UTF-8" | tee -a /etc/environment
-echo "export LANGUAGE=en_US.UTF-8" | tee -a /etc/environment
-echo "export LC_ALL=en_US.UTF-8" | tee -a /etc/environment
-source /etc/environment
+#echo "export LANG=en_US.UTF-8" | tee -a /etc/environment
+#echo "export LANGUAGE=en_US.UTF-8" | tee -a /etc/environment
+#echo "export LC_ALL=en_US.UTF-8" | tee -a /etc/environment
+#source /etc/environment
 
 # enable 4GB swap
 cd /
